@@ -15,6 +15,14 @@ class CreateStocksTable extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
+            $table->string('ticker', 10);
+            $table->string('name', 255);
+            $table->string('address', 255);
+            $table->string('sector', 255);
+            $table->string('industry', 255);
+            $table->string('phone', 255);
+            $table->string('website', 255);
+            $table->text('description');
             $table->timestamps();
         });
     }
